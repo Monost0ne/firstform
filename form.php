@@ -8,9 +8,41 @@
     <title>Document</title>
 </head>
 <body>
-Merci <?=$_POST['user_firstName']?> <?=$_POST['user_lastName']?> de nous avoir contacté à propos de “<?=$_POST['user_subject']?>”.<br><br>
-Un de nos conseillers vous contactera soit à l’adresse <?=$_POST['user_email']?> ou par téléphone au <?='user_phone'?>
-dans les plus brefs délais pour traiter votre demande :<br><br>
-<?=$_POST['user_message']?>
+<main>
+    <form  action="/thanks.php"  method="post">
+        <div>
+            <label  for="prenom">Prenom :</label>
+            <input  type="text"  id="prenom"  name="user_firstName">
+        </div>
+        <div>
+            <label  for="nom">Nom :</label>
+            <input  type="text"  id="nom"  name="user_lastName">
+        </div>
+        <div>
+            <label  for="courriel">Courriel :</label>
+            <input  type="email"  id="courriel"  name="user_email">
+        </div>
+        <div>
+            <label  for="phone">Telephone :</label>
+            <input  type="tel"  id="phone"  name="user_phone">
+        </div>
+        <div>
+            <label  for="subject">Votre sujet :</label>
+            <select id="subject"  name="user_subject">
+                <option value="">Please select a subject</option>
+                <option value="Demande">Demande</option>
+                <option value="Request">Request</option>
+                <option value="Option">Option</option>
+            </select>
+        </div>
+        <div>
+            <label  for="message">Message :</label>
+            <textarea  id="message"  name="user_message"></textarea>
+        </div>
+        <div  class="button">
+            <button  type="submit">Envoyer votre message</button>
+        </div>
+    </form>
+</main>
 </body>
 </html>
