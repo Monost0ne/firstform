@@ -9,7 +9,7 @@
 </head>
 <body>
 <main>
-    <form  action="/form.php"  method="post">
+    <form  action="/thanks.php"  method="post">
         <div>
             <label  for="prenom">Prenom :</label>
             <input  type="text"  id="prenom"  name="user_firstName">
